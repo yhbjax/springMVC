@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--跳转成功页面-->
+success<br>
+<!--获取session域中变量-->
+<p th:text="${testRequestScope}"></p>
+<!--在thymeleaf访问session域中的对象要session.xxx-->
+<p th:text="${session.testSessionScope}"></p>
+<p th:text="${application.testApplicationScope}"></p>
+</body>
+</html>

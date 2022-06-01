@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页</h1>
+<a th:href="@{/hello/testRequestMapping}">测试RequestMapping注解的位置</a><br>
+<a th:href="@{/testRequestMapping}">测试RequestMapping注解的value属性-->/testRequestMapping</a><br>
+<a th:href="@{/test}">测试RequestMapping注解的method属性-->/test</a><br>
+<a th:href="@{/test}">测试RequestMapping注解的method属性-->/GET</a><br>
+<form th:action="@{/test}" method="post">
+    <input type="submit" value="测试RequestMapping注解的method属性-->POST">
+</form>
+<a th:href="@{/testGetMapping}">测试GetMapping注解-->/testGetMapping</a></br>
+<form th:action="@{/testPostMapping}" method="post">
+    <input type="submit" value="测试PostMapping注解-->/testPostMapping">
+</form>
+<form th:action="@{/testPut}" method="put">
+    <input type="submit" value="测试from表单是否能够发送put请求或delete请求方式">
+</form>
+<a th:href="@{/testParamsAndHeaders(username='admid',password=123456)}">测试RequestMapping注解的Params属性-->/testParamsAndHeaders</a><br>
+<a th:href="@{/a1a/testAnt}">测试SpringMVC注解的RequestMapping匹配的ant?号风格风格-->使用</a><br>
+<a th:href="@{/a1a/testAnt1}">测试SpringMVC注解的RequestMapping匹配的ant*号风格-->使用</a><br>
+<a th:href="@{/a1a/testAnt2}">测试SpringMVC注解的RequestMapping匹配的ant风格-->使用</a><br>
+<a th:href="@{/testPath/1/admin}">测试SpringMVC注解RequestMapping支持路径中的占位符-->使用/testPath</a><br>
+</body>
+</html>
